@@ -1,0 +1,330 @@
+Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                TextButton(
+                  onPressed: () async {
+                    await showDialog<void>(
+                        context: context,
+                        builder: (context) => AlertDialog(
+                              content: Stack(
+                                clipBehavior: Clip.none,
+                                children: <Widget>[
+                                  Positioned(
+                                    right: -30,
+                                    top: -30,
+                                    child: InkResponse(
+                                      onTap: () {
+                                        Navigator.of(context).pop();
+                                      },
+                                      child: const CircleAvatar(
+                                        backgroundColor: Colors.blue,
+                                        child: Icon(Icons.close),
+                                      ),
+                                    ),
+                                  ),
+                                  Form(
+                                    key: _formlog,
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: <Widget>[
+                                        Padding(
+                                          padding: const EdgeInsets.all(8),
+                                          child: TextFormField(
+                                            textAlign: TextAlign.end,
+                                            decoration: InputDecoration(
+                                                hintText: 'موبایل / ایمیل',
+                                                fillColor: Colors.amber,
+                                                border: OutlineInputBorder(
+                                                    borderSide: BorderSide(
+                                                      color: Colors.red,
+                                                    ),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            23))),
+                                            style: TextStyle(),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(8),
+                                          child: TextFormField(
+                                            textAlign: TextAlign.end,
+                                            decoration: InputDecoration(
+                                              hintText: 'رمز عبور',
+                                              fillColor: Colors.amber,
+                                              border: OutlineInputBorder(
+                                                borderSide: BorderSide(
+                                                  color: Colors.red,
+                                                ),
+                                                borderRadius:
+                                                    BorderRadius.circular(23),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        Row(
+                                          children: [
+                                            Padding(
+                                                padding:
+                                                    const EdgeInsets.all(0),
+                                                child: TextButton(
+                                                  onPressed: () {},
+                                                  child: Text('فراموشی رمز'),
+                                                )),
+                                          ],
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(8),
+                                          child: ElevatedButton(
+                                            style: ButtonStyle(
+                                                backgroundColor:
+                                                    MaterialStatePropertyAll(
+                                                        Colors.green)),
+                                            child: const Text('ورود'),
+                                            onPressed: () {
+                                              if (_formlog.currentState!
+                                                  .validate()) {
+                                                _formlog.currentState!.save();
+                                              }
+                                            },
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ));
+                  },
+                  child: TextButton(
+                      onPressed: null,
+                      child: Text('قبلا ثبت نام کردم',
+                          style: TextStyle(
+                            color: Colors.green[900],
+                            fontSize: 18,
+                          ))),
+                )
+              ],
+            )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.green,
+
+                              // borderRadius: BorderRadius.circular(120)
+                            ),
+                            // width: MediaQuery.of(context).size.width * 0.15,
+                            // height: MediaQuery.of(context).size.height * 0.06,
+                            // padding: EdgeInsets.symmetric(horizontal: 50),
+                            child: Row(
+                              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                // IconButton(
+                                //     onPressed: null, icon: Icon(Icons.menu)),
+                                TextButton(
+                                  child: Wrap(children: [
+                                    Icon(Icons.line_weight_sharp)
+                                  ]),
+                                  //  IconButton(
+                                  //   onPressed: null,
+                                  //   icon: Icon(Icons.menu),
+                                  // ),
+                                  onPressed: () async {
+                                    await showDialog<void>(
+                                        context: context,
+                                        builder: (context) => AlertDialog(
+                                              content: Stack(
+                                                clipBehavior: Clip.none,
+                                                children: <Widget>[
+                                                  Positioned(
+                                                    right: -30,
+                                                    top: -30,
+                                                    child: InkResponse(
+                                                      onTap: () {
+                                                        Navigator.of(context)
+                                                            .pop();
+                                                      },
+                                                      child: const CircleAvatar(
+                                                        backgroundColor:
+                                                            Colors.green,
+                                                        child:
+                                                            Icon(Icons.close),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Form(
+                                                    key: _formlog,
+                                                    child: Column(
+                                                      mainAxisSize:
+                                                          MainAxisSize.min,
+                                                      children: <Widget>[
+                                                        Row(
+                                                          children: [
+                                                            Container(
+                                                                decoration: BoxDecoration(
+                                                                    color: Colors
+                                                                        .green,
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            300)),
+                                                                padding:
+                                                                    EdgeInsets
+                                                                        .all(
+                                                                            10),
+                                                                // color: Colors.amber,
+                                                                height: 60,
+                                                                child: Image.asset(
+                                                                    'icons/kisepool.png'))
+                                                          ],
+                                                        ),
+                                                        Row(
+                                                          children: [
+                                                            Text('shhgh')
+                                                          ],
+                                                        ),
+                                                        SizedBox(
+                                                          height: 5,
+                                                        ),
+                                                        Row(
+                                                          children: [
+                                                            Container(
+                                                                decoration: BoxDecoration(
+                                                                    color: Colors
+                                                                        .green,
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            300)),
+                                                                padding:
+                                                                    EdgeInsets
+                                                                        .all(
+                                                                            10),
+                                                                // color: Colors.amber,
+                                                                height: 60,
+                                                                child: Image.asset(
+                                                                    'icons/kisepool.png'))
+                                                          ],
+                                                        ),
+                                                        Row(
+                                                          children: [
+                                                            Text('shhgh')
+                                                          ],
+                                                        ),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                  .all(8),
+                                                          child: TextFormField(
+                                                            textAlign:
+                                                                TextAlign.end,
+                                                            decoration:
+                                                                InputDecoration(
+                                                              hintText:
+                                                                  'رمز عبور',
+                                                              fillColor:
+                                                                  Colors.amber,
+                                                              border:
+                                                                  OutlineInputBorder(
+                                                                borderSide:
+                                                                    BorderSide(
+                                                                  color: Colors
+                                                                      .red,
+                                                                ),
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .circular(
+                                                                            23),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                        Row(
+                                                          children: [
+                                                            Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                        .all(0),
+                                                                child:
+                                                                    TextButton(
+                                                                  onPressed:
+                                                                      () {},
+                                                                  child: Text(
+                                                                      'فراموشی رمز'),
+                                                                )),
+                                                          ],
+                                                        ),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                  .all(8),
+                                                          child: ElevatedButton(
+                                                            style: ButtonStyle(
+                                                                backgroundColor:
+                                                                    MaterialStatePropertyAll(
+                                                                        Colors
+                                                                            .green)),
+                                                            child: const Text(
+                                                                'ورود'),
+                                                            onPressed: () {
+                                                              if (_formlog
+                                                                  .currentState!
+                                                                  .validate()) {
+                                                                _formlog
+                                                                    .currentState!
+                                                                    .save();
+                                                              }
+                                                            },
+                                                          ),
+                                                        )
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ));
+                                  },
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      )
+                  
